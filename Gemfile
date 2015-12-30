@@ -33,6 +33,8 @@ gem 'sprockets', '2.11.0'
 
 gem 'kaminari'
 
+gem 'simple_form'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
