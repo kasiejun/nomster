@@ -91,4 +91,26 @@ function initMap() {
   </div>
 <% end %>
 
+<!-- Photos Section -->
+<div class="clear"></div>
+<h1>Add Your Photo</h1>
+<div class="booyah-box">
+<%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
+  <%= f.input :picture %>
+  <%= f.input :caption %>
+  <%= f.submit 'Upload a photo', :class => 'btn btn-primary' %> 
+<% end %>
+</div>
+
+<!-- Showing Photos -->
+<h1>Photos</h1>
+<br />
+<% @place.photos.each do |photo| %> 
+<% image_tag photo.picture, :class => 'img-responsive' %> 
+<% photo.caption %>
+<% end %>
+
+
+
+
 
