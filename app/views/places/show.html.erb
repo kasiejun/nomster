@@ -106,8 +106,8 @@ function initMap() {
 <h1>Photos</h1>
 <br />
 <% @place.photos.each do |photo| %> 
-<% image_tag photo.picture, :class => 'img-responsive' %> 
-<% photo.caption %>
+<%= image_tag photo.picture, :class => 'img-responsive' %> 
+<%= photo.caption %>
 <% end %>
 
 
